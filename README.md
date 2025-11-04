@@ -21,7 +21,7 @@ Deliver a fully working MVP **before Nov 12 (1 week)** that lets users:
 * **Redis** (for cache + queue + scoreboard)
 * **Laravel Horizon** (queue monitoring)
 * **Filament Admin** (panel + CRUD + dashboard)
-* **Stripe / PayPal** (for now) → webhooks; optional Mobile Money later
+* **Moneroo payment gateway** (for now) → webhooks; Mobile Money
 * **RateLimiter + reCAPTCHA v3** for anti-spam
 * **Telescope** (staging), logs centralized in production
 * **Cron + Supervisor/Horizon** for background jobs
@@ -263,7 +263,7 @@ Webhook (`POST /webhook/payment/{provider}`) → marks order paid → creates `r
 | ----------------- | -------------------------------------------------------------------------------------- |
 | **Day 1 (Nov 3)** | Set up Laravel project, .env, DB, Redis, migrations + models + seed (teams, products). |
 | **Day 2**         | Auth (Breeze), basic UI pages + Filament Admin install.                                |
-| **Day 3**         | Payment integration (Stripe/PayPal) + webhook credit logic.                            |
+| **Day 3**         | Payment integration **Moneroo payment gateway**; Mobile Money + webhook credit logic.  |
 | **Day 4**         | Voting endpoint + Redis scoreboard + rate-limit + reCAPTCHA.                           |
 | **Day 5**         | Raffles module (models, CRUD, purchases, ranges, auto-draw command).                   |
 | **Day 6**         | Results UI + email notifications + admin exports.                                      |
